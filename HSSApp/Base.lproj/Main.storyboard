@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HSSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,76 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High School Sport" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eW3-qT-dXx">
+                                <rect key="frame" x="144" y="139" width="312" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5u-lc-YGb">
+                                <rect key="frame" x="248" y="310" width="105" height="30"/>
+                                <state key="normal" title="Вход через VK"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9P-a8-nxF">
+                                <rect key="frame" x="234" y="368" width="133" height="30"/>
+                                <state key="normal" title="Вход через Twitter"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALa-4V-tru">
+                                <rect key="frame" x="258" y="458" width="85" height="30"/>
+                                <state key="normal" title="Пропустить"/>
+                                <connections>
+                                    <segue destination="yj3-Nb-KUh" kind="show" id="zhc-Md-25z"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P5u-lc-YGb" firstAttribute="centerX" secondItem="Y9P-a8-nxF" secondAttribute="centerX" id="1jt-Fd-9dx"/>
+                            <constraint firstItem="eW3-qT-dXx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="119" id="3FZ-sp-HvX"/>
+                            <constraint firstItem="ALa-4V-tru" firstAttribute="top" secondItem="Y9P-a8-nxF" secondAttribute="bottom" constant="60" id="BaN-yI-hJe"/>
+                            <constraint firstItem="P5u-lc-YGb" firstAttribute="centerX" secondItem="eW3-qT-dXx" secondAttribute="centerX" id="Yac-xt-KPi"/>
+                            <constraint firstItem="Y9P-a8-nxF" firstAttribute="top" secondItem="P5u-lc-YGb" secondAttribute="bottom" constant="28" id="eDM-YT-d1U"/>
+                            <constraint firstItem="P5u-lc-YGb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iWr-1Z-Ejm"/>
+                            <constraint firstItem="Y9P-a8-nxF" firstAttribute="centerX" secondItem="ALa-4V-tru" secondAttribute="centerX" id="q4r-YH-8D3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ALa-4V-tru" secondAttribute="bottom" constant="112" id="x4l-dn-6WT"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="307" y="561"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="uzx-Eh-dEx">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Vg-3x-alz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="yj3-Nb-KUh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yO4-Jd-9ZM"/>
+                        <viewControllerLayoutGuide type="bottom" id="GWv-8m-HW0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ndq-dP-yWP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kQb-P3-ki7">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="HSE Sport" id="2Vj-kH-XmX"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="kQb-P3-ki7" secondAttribute="trailing" id="bPp-NU-Hs1"/>
+                            <constraint firstItem="kQb-P3-ki7" firstAttribute="top" secondItem="ndq-dP-yWP" secondAttribute="top" id="bt5-0d-huS"/>
+                            <constraint firstItem="kQb-P3-ki7" firstAttribute="leading" secondItem="ndq-dP-yWP" secondAttribute="leading" id="gnW-a4-aVG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1027" y="561"/>
         </scene>
     </scenes>
 </document>
